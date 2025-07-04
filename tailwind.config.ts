@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,6 +19,11 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'playfair': ['Playfair Display', 'serif'],
+				'lora': ['Lora', 'serif'], 
+				'poppins': ['Poppins', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,7 +67,12 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// New spiritual color palette
+				'blue-deep': '#325D79',
+				'gold-divine': '#D4AF37', 
+				'beige-soft': '#F5F2EA',
+				'gray-spiritual': '#4B4B4B'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
