@@ -1,25 +1,23 @@
 
 import HeroSection from "@/components/HeroSection";
-import AboutJourney from "@/components/AboutJourney";
-import WhyParticipate from "@/components/WhyParticipate";
-import ForWho from "@/components/ForWho";
-import WhatYouGet from "@/components/WhatYouGet";
-import SignupForm from "@/components/SignupForm";
-import WhenStarts from "@/components/WhenStarts";
-import FAQ from "@/components/FAQ";
+import WhatIsEbook from "@/components/WhatIsEbook";
+import BookStructure from "@/components/BookStructure";
+import BonusSection from "@/components/BonusSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import OfferSection from "@/components/OfferSection";
+import CheckoutSection from "@/components/CheckoutSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
       <HeroSection />
-      <AboutJourney />
-      <WhyParticipate />
-      <ForWho />
-      <WhatYouGet />
-      <SignupForm />
-      <WhenStarts />
-      <FAQ />
+      <WhatIsEbook />
+      <BookStructure />
+      <BonusSection />
+      <TestimonialsSection />
+      <OfferSection />
+      <CheckoutSection />
       <Footer />
     </div>
   );
