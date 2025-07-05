@@ -48,7 +48,7 @@ const OfferSection = () => {
               <div className="mb-2">
                 <span className="font-lora text-lg line-through text-blue-deep/70">De R$ 97,00</span>
               </div>
-              <div className="font-playfair text-5xl font-bold mb-4">GRATUITO</div>
+              <div className="font-playfair text-5xl font-bold mb-4">R$ 19,99</div>
               <ul className="text-left space-y-2 font-lora">
                 <li>• eBook completo (21 dias)</li>
                 <li>• 4 bônus exclusivos</li>

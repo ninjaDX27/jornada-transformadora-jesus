@@ -68,7 +68,7 @@ const BonusSection = () => {
             💰 Valor Total dos Bônus: <span className="line-through text-red-300">R$ 197,00</span>
           </h3>
           <p className="font-poppins text-lg md:text-lg text-gold-divine font-bold">
-            Seu investimento hoje: <span className="text-2xl md:text-3xl">GRATUITO</span>
+            Seu investimento hoje: <span className="text-2xl md:text-3xl">R$ 19,99</span>
           </p>
           <p className="font-lora text-xs md:text-sm text-beige-soft/70 mt-2">
             ⚠️ Oferta por tempo limitado - Não perca!

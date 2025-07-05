@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -69,7 +68,7 @@ const CheckoutSection = () => {
                 <hr className="my-3 border-green-300"/>
                 <div className="flex justify-between font-bold text-base md:text-lg">
                   <span>TOTAL:</span>
-                  <span className="text-green-600 text-xl md:text-2xl">GRATUITO</span>
+                  <span className="text-green-600 text-xl md:text-2xl">R$ 19,99</span>
                 </div>
               </div>
             </div>
@@ -138,7 +137,7 @@ const CheckoutSection = () => {
                 size="lg" 
                 className="w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-bold py-4 md:py-6 text-lg md:text-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 min-h-[56px]"
               >
-                🔥 RECEBER MEU EBOOK AGORA - 100% GRÁTIS
+                🔥 COMPRAR AGORA POR R$ 19,99
               </Button>
               
               <div className="text-center text-xs text-gray-600 space-y-1">
