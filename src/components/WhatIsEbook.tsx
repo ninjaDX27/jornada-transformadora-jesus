@@ -26,31 +26,31 @@ const WhatIsEbook = () => {
   ];
 
   return (
-    <section className="py-20 bg-beige-soft">
+    <section className="py-12 md:py-20 bg-beige-soft">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="font-playfair text-3xl md:text-4xl font-semibold mb-6 text-blue-deep">
+        <div className="max-w-4xl mx-auto text-center mb-12 md:mb-16">
+          <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 md:mb-6 text-blue-deep">
             📘 O que é a Jornada Transformadora de Jesus?
           </h2>
-          <p className="font-lora text-lg text-gray-spiritual leading-relaxed mb-8">
+          <p className="font-lora text-base md:text-lg text-gray-spiritual leading-relaxed mb-6 md:mb-8">
             Este não é apenas mais um eBook cristão. É um <strong className="text-blue-deep">guia prático e espiritual</strong> 
             que vai te acompanhar por 21 dias em uma jornada profunda de renovação da fé, 
             crescimento espiritual e intimidade com Cristo.
           </p>
-          <div className="bg-gradient-to-r from-gold-divine/10 to-blue-deep/10 p-6 rounded-lg border-l-4 border-gold-divine">
-            <p className="font-lora text-gray-spiritual font-medium italic">
+          <div className="bg-gradient-to-r from-gold-divine/10 to-blue-deep/10 p-4 md:p-6 rounded-lg border-l-4 border-gold-divine">
+            <p className="font-lora text-gray-spiritual font-medium italic text-sm md:text-base leading-relaxed">
               "Cada página foi escrita com oração e inspiração divina para tocar seu coração 
               e transformar sua caminhada com Jesus de forma real e duradoura."
             </p>
           </div>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {features.map((feature, index) => (
-            <Card key={index} className="p-6 text-center hover:shadow-lg transition-all duration-300 border-2 hover:border-gold-divine/30 bg-white">
-              <div className="text-4xl mb-4 text-gold-divine">{feature.icon}</div>
-              <h3 className="font-poppins text-lg font-semibold mb-3 text-blue-deep">{feature.title}</h3>
-              <p className="font-lora text-gray-spiritual text-sm leading-relaxed">{feature.description}</p>
+            <Card key={index} className="p-4 md:p-6 text-center hover:shadow-lg transition-all duration-300 border-2 hover:border-gold-divine/30 bg-white">
+              <div className="text-3xl md:text-4xl mb-3 md:mb-4 text-gold-divine">{feature.icon}</div>
+              <h3 className="font-poppins text-base md:text-lg font-semibold mb-2 md:mb-3 text-blue-deep leading-tight">{feature.title}</h3>
+              <p className="font-lora text-gray-spiritual text-xs md:text-sm leading-relaxed">{feature.description}</p>
             </Card>
           ))}
         </div>

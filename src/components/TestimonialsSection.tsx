@@ -1,5 +1,12 @@
 
 import { Card } from "@/components/ui/card";
+import { 
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const TestimonialsSection = () => {
   const testimonials = [
@@ -54,18 +61,59 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-12 md:py-20 bg-white">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">
+        <div className="max-w-4xl mx-auto text-center mb-12 md:mb-16">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 text-gray-800">
             ❤️ Vidas Transformadas Por Jesus
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-base md:text-lg text-gray-600">
             Veja o que pessoas reais estão falando sobre sua jornada de transformação
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Mobile and Tablet Carousel */}
+        <div className="lg:hidden">
+          <Carousel className="w-full max-w-sm md:max-w-2xl mx-auto">
+            <CarouselContent>
+              {testimonials.map((testimonial, index) => (
+                <CarouselItem key={index} className="md:basis-1/2">
+                  <div className="p-1">
+                    <Card className="p-4 md:p-6 bg-gradient-to-br from-white to-amber-50/30 shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-amber-600 h-full">
+                      <div className="flex items-center mb-4">
+                        <div className="text-2xl md:text-3xl mr-3">{testimonial.photo}</div>
+                        <div className="text-left">
+                          <h4 className="font-bold text-gray-800 text-sm md:text-base">{testimonial.name}</h4>
+                          <p className="text-xs md:text-sm text-gray-600">{testimonial.age} • {testimonial.location}</p>
+                        </div>
+                      </div>
+                      
+                      <div className="mb-4">
+                        <div className="flex text-amber-400 mb-2">
+                          {"⭐".repeat(5)}
+                        </div>
+                        <p className="text-gray-700 text-sm italic leading-relaxed">
+                          "{testimonial.testimony}"
+                        </p>
+                      </div>
+                      
+                      <div className="bg-amber-100 p-3 rounded-lg">
+                        <p className="text-amber-800 font-semibold text-xs">
+                          🔥 {testimonial.highlight}
+                        </p>
+                      </div>
+                    </Card>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        </div>
+        
+        {/* Desktop Grid */}
+        <div className="hidden lg:grid lg:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="p-6 bg-gradient-to-br from-white to-amber-50/30 shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-amber-600">
               <div className="flex items-center mb-4">
@@ -94,13 +142,14 @@ const TestimonialsSection = () => {
           ))}
         </div>
         
-        <div className="text-center mt-12">
-          <Card className="inline-block p-6 bg-gradient-to-r from-green-500 to-blue-500 text-white">
-            <div className="flex items-center space-x-4">
-              <div className="text-4xl">📊</div>
-              <div className="text-left">
-                <h4 className="font-bold text-xl">+2.847 vidas transformadas</h4>
-                <p className="text-green-100">Nota média: 4.9/5 ⭐⭐⭐⭐⭐</p>
+        {/* Statistics - Mobile optimized */}
+        <div className="text-center mt-8 md:mt-12">
+          <Card className="inline-block p-4 md:p-6 bg-gradient-to-r from-green-500 to-blue-500 text-white">
+            <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
+              <div className="text-3xl md:text-4xl">📊</div>
+              <div className="text-center sm:text-left">
+                <h4 className="font-bold text-lg md:text-xl">+2.847 vidas transformadas</h4>
+                <p className="text-green-100 text-sm md:text-base">Nota média: 4.9/5 ⭐⭐⭐⭐⭐</p>
               </div>
             </div>
           </Card>
