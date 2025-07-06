@@ -61,43 +61,43 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="py-12 md:py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center mb-12 md:mb-16">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 text-gray-800">
+    <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-white px-3 sm:px-4 md:px-6 lg:px-8">
+      <div className="container mx-auto">
+        <div className="max-w-4xl mx-auto text-center mb-8 sm:mb-12 md:mb-16">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 md:mb-6 text-gray-800">
             ❤️ Vidas Transformadas Por Jesus
           </h2>
-          <p className="text-base md:text-lg text-gray-600">
+          <p className="text-sm sm:text-base md:text-lg text-gray-600">
             Veja o que pessoas reais estão falando sobre sua jornada de transformação
           </p>
         </div>
         
         {/* Mobile and Tablet Carousel */}
         <div className="lg:hidden">
-          <Carousel className="w-full max-w-sm md:max-w-2xl mx-auto">
+          <Carousel className="w-full max-w-xs sm:max-w-sm md:max-w-2xl mx-auto">
             <CarouselContent>
               {testimonials.map((testimonial, index) => (
                 <CarouselItem key={index} className="md:basis-1/2">
                   <div className="p-1">
-                    <Card className="p-4 md:p-6 bg-gradient-to-br from-white to-amber-50/30 shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-amber-600 h-full">
-                      <div className="flex items-center mb-4">
-                        <div className="text-2xl md:text-3xl mr-3">{testimonial.photo}</div>
+                    <Card className="p-3 sm:p-4 md:p-6 bg-gradient-to-br from-white to-amber-50/30 shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-amber-600 h-full">
+                      <div className="flex items-center mb-3 sm:mb-4">
+                        <div className="text-xl sm:text-2xl md:text-3xl mr-2 sm:mr-3">{testimonial.photo}</div>
                         <div className="text-left">
-                          <h4 className="font-bold text-gray-800 text-sm md:text-base">{testimonial.name}</h4>
-                          <p className="text-xs md:text-sm text-gray-600">{testimonial.age} • {testimonial.location}</p>
+                          <h4 className="font-bold text-gray-800 text-xs sm:text-sm md:text-base">{testimonial.name}</h4>
+                          <p className="text-xs sm:text-sm text-gray-600">{testimonial.age} • {testimonial.location}</p>
                         </div>
                       </div>
                       
-                      <div className="mb-4">
-                        <div className="flex text-amber-400 mb-2">
+                      <div className="mb-3 sm:mb-4">
+                        <div className="flex text-amber-400 mb-1.5 sm:mb-2 text-sm sm:text-base">
                           {"⭐".repeat(5)}
                         </div>
-                        <p className="text-gray-700 text-sm italic leading-relaxed">
+                        <p className="text-gray-700 text-xs sm:text-sm italic leading-relaxed">
                           "{testimonial.testimony}"
                         </p>
                       </div>
                       
-                      <div className="bg-amber-100 p-3 rounded-lg">
+                      <div className="bg-amber-100 p-2 sm:p-3 rounded-lg">
                         <p className="text-amber-800 font-semibold text-xs">
                           🔥 {testimonial.highlight}
                         </p>
@@ -107,8 +107,8 @@ const TestimonialsSection = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
+            <CarouselPrevious className="left-0 sm:-left-8" />
+            <CarouselNext className="right-0 sm:-right-8" />
           </Carousel>
         </div>
         
@@ -143,13 +143,13 @@ const TestimonialsSection = () => {
         </div>
         
         {/* Statistics - Mobile optimized */}
-        <div className="text-center mt-8 md:mt-12">
-          <Card className="inline-block p-4 md:p-6 bg-gradient-to-r from-green-500 to-blue-500 text-white">
+        <div className="text-center mt-6 sm:mt-8 md:mt-12">
+          <Card className="inline-block p-3 sm:p-4 md:p-6 bg-gradient-to-r from-green-500 to-blue-500 text-white">
             <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
-              <div className="text-3xl md:text-4xl">📊</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl">📊</div>
               <div className="text-center sm:text-left">
-                <h4 className="font-bold text-lg md:text-xl">+2.847 vidas transformadas</h4>
-                <p className="text-green-100 text-sm md:text-base">Nota média: 4.9/5 ⭐⭐⭐⭐⭐</p>
+                <h4 className="font-bold text-base sm:text-lg md:text-xl">+2.847 vidas transformadas</h4>
+                <p className="text-green-100 text-xs sm:text-sm md:text-base">Nota média: 4.9/5 ⭐⭐⭐⭐⭐</p>
               </div>
             </div>
           </Card>
