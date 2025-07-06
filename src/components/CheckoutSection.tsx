@@ -23,7 +23,7 @@ const CheckoutSection = () => {
   };
 
   return (
-    <section id="checkout" className="py-8 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-amber-600 via-orange-500 to-red-600 text-white px-3 sm:px-4 md:px-6 lg:px-8">
+    <section id="checkout" className="py-8 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-amber-600 via-orange-500 to-red-600 text-white px-4 sm:px-6 md:px-8">
       <div className="container mx-auto max-w-full">
         <div className="max-w-xl sm:max-w-2xl mx-auto">
           <div className="text-center mb-6 sm:mb-8 md:mb-12">
@@ -31,49 +31,49 @@ const CheckoutSection = () => {
               🔥 ÚLTIMA CHANCE - Oferta encerra em breve!
             </div>
             
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight px-2">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight">
               Sua Transformação Está a Um Clique de Distância
             </h2>
             
-            <p className="text-base sm:text-lg md:text-xl mb-4 sm:mb-6 md:mb-8 opacity-90 leading-relaxed px-2">
+            <p className="text-base sm:text-lg md:text-xl mb-4 sm:mb-6 md:mb-8 opacity-90 leading-relaxed">
               Preencha os dados abaixo e receba imediatamente seu eBook + todos os bônus no seu e-mail
             </p>
           </div>
           
-          <Card className="p-3 sm:p-4 md:p-6 lg:p-8 bg-white/95 backdrop-blur-sm border-2 border-yellow-300 text-gray-800 mx-2 sm:mx-0">
+          <Card className="p-4 sm:p-6 md:p-8 bg-white/95 backdrop-blur-sm border-2 border-yellow-300 text-gray-800">
             {/* Resumo da oferta */}
-            <div className="bg-gradient-to-r from-green-50 to-blue-50 p-3 sm:p-4 md:p-6 rounded-lg mb-4 sm:mb-6 border border-green-200">
+            <div className="bg-gradient-to-r from-green-50 to-blue-50 p-4 sm:p-6 rounded-lg mb-4 sm:mb-6 border border-green-200">
               <h3 className="font-bold text-sm sm:text-base md:text-lg mb-2 sm:mb-3 text-green-800">📋 Resumo do seu pedido:</h3>
               <div className="space-y-1 sm:space-y-2 text-xs sm:text-sm">
                 <div className="flex justify-between items-center gap-2">
-                  <span className="flex-1 min-w-0 truncate">• eBook Jornada Transformadora (21 dias)</span>
-                  <span className="line-through text-gray-500 whitespace-nowrap">R$ 97,00</span>
+                  <span className="flex-1">• eBook Jornada Transformadora (21 dias)</span>
+                  <span className="line-through text-gray-500 text-nowrap">R$ 97,00</span>
                 </div>
                 <div className="flex justify-between items-center gap-2">
-                  <span className="flex-1 min-w-0 truncate">• Playlist Adoração Transformadora</span>
-                  <span className="line-through text-gray-500 whitespace-nowrap">R$ 47,00</span>
+                  <span className="flex-1">• Playlist Adoração Transformadora</span>
+                  <span className="line-through text-gray-500 text-nowrap">R$ 47,00</span>
                 </div>
                 <div className="flex justify-between items-center gap-2">
-                  <span className="flex-1 min-w-0 truncate">• Wallpapers Inspiracionais</span>
-                  <span className="line-through text-gray-500 whitespace-nowrap">R$ 27,00</span>
+                  <span className="flex-1">• Wallpapers Inspiracionais</span>
+                  <span className="line-through text-gray-500 text-nowrap">R$ 27,00</span>
                 </div>
                 <div className="flex justify-between items-center gap-2">
-                  <span className="flex-1 min-w-0 truncate">• Guia de Estudo Bíblico</span>
-                  <span className="line-through text-gray-500 whitespace-nowrap">R$ 67,00</span>
+                  <span className="flex-1">• Guia de Estudo Bíblico</span>
+                  <span className="line-through text-gray-500 text-nowrap">R$ 67,00</span>
                 </div>
                 <div className="flex justify-between items-center gap-2">
-                  <span className="flex-1 min-w-0 truncate">• 30 Orações Poderosas</span>
-                  <span className="line-through text-gray-500 whitespace-nowrap">R$ 37,00</span>
+                  <span className="flex-1">• 30 Orações Poderosas</span>
+                  <span className="line-through text-gray-500 text-nowrap">R$ 37,00</span>
                 </div>
                 <hr className="my-2 sm:my-3 border-green-300"/>
                 <div className="flex justify-between font-bold text-sm sm:text-base md:text-lg gap-2">
                   <span>TOTAL:</span>
-                  <span className="text-green-600 text-lg sm:text-xl md:text-2xl whitespace-nowrap">R$ 19,99</span>
+                  <span className="text-green-600 text-lg sm:text-xl md:text-2xl text-nowrap">R$ 19,99</span>
                 </div>
               </div>
             </div>
             
-            <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4 md:space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
               <div>
                 <Label htmlFor="name" className="text-gray-700 font-medium mb-1 sm:mb-2 block text-xs sm:text-sm md:text-base">
                   Nome Completo *
@@ -122,10 +122,10 @@ const CheckoutSection = () => {
                 </p>
               </div>
               
-              <div className="bg-yellow-50 p-2 sm:p-3 md:p-4 rounded-lg border border-yellow-200">
-                <div className="flex items-start space-x-1.5 sm:space-x-2">
-                  <input type="checkbox" required className="mt-0.5 min-w-[14px] min-h-[14px]"/>
-                  <p className="text-xxs sm:text-xs text-gray-700 leading-relaxed">
+              <div className="bg-yellow-50 p-3 sm:p-4 rounded-lg border border-yellow-200">
+                <div className="flex items-start space-x-2">
+                  <input type="checkbox" required className="mt-1 min-w-[16px] min-h-[16px]"/>
+                  <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
                     Ao clicar em "Comprar Agora", você concorda em receber e-mails inspiracionais 
                     e materiais gratuitos sobre crescimento espiritual. Seus dados estão seguros conosco.
                   </p>
@@ -135,12 +135,15 @@ const CheckoutSection = () => {
             <Button 
               type="submit" 
               size="lg" 
-              className="w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-bold py-3 sm:py-4 md:py-6 text-sm sm:text-base md:text-lg lg:text-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 min-h-[48px] sm:min-h-[56px] md:min-h-[64px] px-2 leading-tight"
+              className="w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-bold py-4 sm:py-5 md:py-6 text-base sm:text-lg md:text-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 min-h-[56px] sm:min-h-[64px] md:min-h-[72px] rounded-lg"
             >
-              <span className="text-center break-words">🔥 COMPRAR AGORA POR R$ 19,99</span>
+              <span className="px-2 text-center leading-tight">
+                🔥 COMPRAR AGORA<br className="sm:hidden"/>
+                <span className="sm:inline"> POR R$ 19,99</span>
+              </span>
             </Button>
             
-              <div className="text-center text-xxs sm:text-xs text-gray-600 space-y-0.5 sm:space-y-1">
+              <div className="text-center text-xs sm:text-sm text-gray-600 space-y-1 mt-4">
                 <p>🔒 Suas informações estão seguras e protegidas</p>
                 <p>📱 Acesso imediato pelo celular, tablet ou computador</p>
                 <p>✝️ Material 100% baseado na Palavra de Deus</p>
@@ -149,7 +152,7 @@ const CheckoutSection = () => {
           </Card>
           
           <div className="text-center mt-4 sm:mt-6">
-            <p className="text-xxs sm:text-xs opacity-80">
+            <p className="text-xs sm:text-sm opacity-80">
               ⏰ Esta oferta especial expira em: <span className="font-bold text-yellow-300">23:45:12</span>
             </p>
           </div>
