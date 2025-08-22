@@ -15,11 +15,19 @@ const CheckoutSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "🎉 Parabéns! Sua transformação começou!",
-      description: "Verifique seu e-mail - o eBook chegará em instantes. Prepare seu coração para 21 dias que mudarão sua vida!",
-    });
-    setFormData({ name: "", email: "", phone: "" });
+    
+    // Validar se os campos obrigatórios estão preenchidos
+    if (!formData.name || !formData.email) {
+      toast({
+        title: "Ops! Dados incompletos",
+        description: "Por favor, preencha seu nome e e-mail para continuar.",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    // Redirecionar para o pagamento do Stripe
+    window.location.href = "https://buy.stripe.com/28E7sMbTD7ok4HadFmbII00";
   };
 
   return (
