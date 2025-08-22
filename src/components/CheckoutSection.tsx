@@ -14,10 +14,14 @@ const CheckoutSection = () => {
   const { toast } = useToast();
 
   const handleSubmit = (e: React.FormEvent) => {
+    console.log("🔥 Botão clicado! Função handleSubmit chamada");
     e.preventDefault();
+    
+    console.log("📝 Dados do formulário:", formData);
     
     // Validar se os campos obrigatórios estão preenchidos
     if (!formData.name || !formData.email) {
+      console.log("❌ Validação falhou - dados incompletos");
       toast({
         title: "Ops! Dados incompletos",
         description: "Por favor, preencha seu nome e e-mail para continuar.",
@@ -26,8 +30,15 @@ const CheckoutSection = () => {
       return;
     }
 
+    console.log("✅ Validação passou - redirecionando para Stripe...");
+    
     // Redirecionar para o pagamento do Stripe
-    window.location.href = "https://buy.stripe.com/28E7sMbTD7ok4HadFmbII00";
+    try {
+      window.location.href = "https://buy.stripe.com/28E7sMbTD7ok4HadFmbII00";
+      console.log("🚀 Redirecionamento iniciado");
+    } catch (error) {
+      console.error("❌ Erro no redirecionamento:", error);
+    }
   };
 
   return (
